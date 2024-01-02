@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityExistsException;
+import javax.persistence.EntityNotFoundException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
@@ -67,6 +68,12 @@ public class SalarieAideADomicileService {
      */
     public Page<SalarieAideADomicile> getSalaries(Pageable pageable) {
         return salarieAideADomicileRepository.findAll(pageable);
+    }
+    /**
+     * @recherche le salarie
+     */
+    public SalarieAideADomicile rechercherParNom(String nom) {
+        return salarieAideADomicileRepository.findByNom(nom);
     }
 
     /**
@@ -279,5 +286,6 @@ public class SalarieAideADomicileService {
 
         salarieAideADomicileRepository.save(salarieAideADomicile);
     }
+
 
 }

@@ -45,7 +45,7 @@ public class HomeController
             //    LocalDate.of(2021, 7, 1), LocalDate.now(), 0, 0, 10, 1, 0);
         SalarieAideADomicile salarie = salarieAideADomicileService.getSalarie(id);
         modelMap.put("salarie", salarie);
-        modelMap.put("actionUrl", "/salaries/save");
+        modelMap.put("actionUrl", "/salaries/{id}");
         return "detail_Salarie";
     }
 
