@@ -95,7 +95,7 @@ public class ControllerIndex {
         Long countSalaries = salarieAideADomicileService.countSalaries();
         modelMap.put("nombreSalaries", countSalaries);
         modelMap.put("salarie", salarie);
-        return "modifier_Salarie";
+        return "update_Salarie";
     }
 
     @PostMapping("/salaries/{id}/modifier")

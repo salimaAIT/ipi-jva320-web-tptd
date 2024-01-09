@@ -87,7 +87,6 @@
         <div class="col-lg-6">
             <input form="saveForm" class="btn btn-primary" type="submit" value="Enregistrer">
             <a href="/salaries/{id}/delete" class="btn btn-danger">Supprimer</a>
-            <button class="btn btn-warning" id="editButton" th:if="${salaries.id ne null}" th:onclick="'editEmployee(' + ${salaries.id} + ')'" type="button">Modifier</button>
         </div>
     </div>
 </div>
